@@ -1,0 +1,63 @@
+@white: #ffffff;
+@activebg: #3F5177;
+@infoColor: #51C4F0;
+
+// 查询表单
+.searchForm {
+	:global {
+		.ant-form-item {
+			display: flex;
+			align-items: center;
+			margin: 8px 16px;
+			> .ant-form-item-label {
+				width: auto;
+				padding: 0 8px 0 0;
+			}
+			.ant-form-item-control {
+				line-height: 32px;
+			}
+		}
+		.ant-form-item-control-wrapper {
+			flex: 1;
+		}	
+		.ant-select-arrow {
+			color: @activebg;
+		}
+	}
+}
+// 表格 离线与否 列
+.linewrapper {
+	width: 16px;
+	height: 12px;
+	display: inline-block;
+	margin-right: 12px;
+	background-position: center;
+}
+.offline {
+	background-image: url(../assets/offline.png)
+}
+.online {
+	background-image: url(../assets/online.png)
+}
+
+// 按钮
+.successfulBtn,
+.successfulBtn:focus {
+	border-radius: 4px;
+}
+.primaryBtn,
+.primaryBtn:hover,
+.primaryBtn:focus {
+  	background: @infoColor;
+	border-color: @infoColor; 
+  	border-radius: 4px;
+  	color: @white;
+}
+
+// 下拉框
+:global {
+	.ant-select-dropdown-menu-item:hover,
+	.ant-select-dropdown-menu-item-active {
+		background: @activebg;
+	}
+}

@@ -1,0 +1,107 @@
+@color: #3070B8;
+@bgcolor: #222d43;
+
+.squareBox {
+	display: flex;
+	line-height: 70px;
+	height: 70px;
+	background: @bgcolor;
+	padding: 0 34px;
+	margin: 16px 0;
+	.boxIcon {
+		width: 32px !important;
+		height: 32px !important;
+		margin-top: 19px;
+	}
+	.name {
+		width: 180px;	
+		margin-left: 30px;	
+	}
+	.footer {
+		font-size: 20px;
+		color: @color;
+		font-weight: 700;
+	}
+}
+.line {
+	width: 2px;
+	height: 36px;
+	background: #ffffff;
+	display: block;
+	position: absolute;
+	top: 9px;
+	left: 3px;
+}
+.dots {
+	width: 9px;
+	height: 9px;
+	background: #ffffff;
+	display: block;
+	border-radius: 50%;
+}
+table {
+	tbody {
+		tr:last-child {
+			.line {
+				height: 18px;
+			}
+		}
+	}
+}
+.bodynopadding {
+	height: 421px;
+	:global {
+		.ant-card-body {
+			padding: 0!important;
+			overflow-y: auto;
+			height: 365px;
+		}
+	}
+}
+.wrapper {
+	height: 421px;
+	overflow: hidden;
+	background: #1f2638;
+	:global {
+		.ant-table-body {
+			height: 365px;
+			overflow-y: auto;
+		}
+	}
+}
+.table {
+	:global {
+		.ant-table {
+			.ant-table-tbody > tr.ant-table-row:nth-of-type(even),
+			.ant-table-tbody > tr.ant-table-row:nth-of-type(odd) {
+				background: transparent!important;
+			}
+			.ant-table-thead {
+				line-height: 32px;
+				border: none;
+			}
+			.ant-table-thead > tr > th {
+				background: #293146;
+			}
+		}
+	}
+}
+:global {
+	.anchorBL{ display:none; }
+}
+.leftPart {
+	padding-right: 32px;
+}
+.rightPart {
+	margin-bottom: 32px;
+}
+@media screen and (max-width: 1199px) {
+	.leftPart {
+		padding-right: 0;
+	}	
+}
+@media screen and (max-width: 1199px)  and (min-width: 768px) {
+	.rightPart {
+		padding-right: 32px;
+	}
+}

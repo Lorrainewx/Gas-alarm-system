@@ -1,0 +1,130 @@
+@active: #63d796;
+@background: #303b51;
+@base-borderColor: #3b3e47;
+
+.myModal{
+    :global{
+        .ant-modal-content{
+            font-size: 14px;
+        }
+    }
+}
+
+.main{
+    width: 100%;
+    min-width: 100%;
+    overflow-x: auto;
+    .container{
+        max-height: 580px;
+        overflow-y: auto;
+    }
+    :global(.ant-row-flex){
+        &:nth-of-type(1){
+            :global(.ant-col):nth-of-type(1){
+                .titleBox{
+                    border-right: none !important;
+                }
+            } 
+        }
+        &:nth-last-of-type(1){
+            :global(.ant-col){
+                .titleBox,
+                .innerBox{
+                    border-bottom: none !important;
+                }
+            }
+        }
+        :global(.ant-col):nth-last-child(1){
+            .titleBox,
+            .innerBox{
+                border-right: none !important;
+            }
+        }
+    }
+}
+
+.optionalButton{
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    cursor: pointer;
+    white-space: nowrap;
+    &[data-state='plus-square'] .optionalIcon{
+        color: #e5e7e6;
+    }
+    &[data-state='minus-square'] .optionalIcon{
+        color: #f4eb2a;
+    }
+    &[data-state='check-square'] .optionalIcon{
+        color: @active;
+    }
+    .optionalIcon{
+        font-size: 14px;
+        margin-right: 6px;
+    }
+}
+
+.titleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    &.row{
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-right: 1px solid @base-borderColor;
+    }
+    &.col{
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid @base-borderColor;
+    }
+}
+
+.innerBox{
+    height: 100%;
+    padding: 0 16px;
+    border-right: 1px solid @base-borderColor;
+    border-bottom: 1px solid @base-borderColor;
+    font-size: 12px;
+    
+    .innerDefault{
+        width: 100%;
+        height: auto;
+        border-bottom: 1px dashed #67686c;
+    }
+
+    .innerItem{
+        width: 100%;
+        padding: 9px 0;
+        min-height: 36px;
+        max-height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .dataBox{
+            width: 94%;
+            display: flex;
+            white-space: nowrap;
+            .innerData{
+                margin-left: 24px;
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+                span{
+                    color: #848484;
+                }
+            }
+        }
+        .tools{
+            opacity: 0.2;
+            transition: all 0.2s;
+        }
+        &.focus,
+        &:hover{
+            .tools{
+                opacity: 1;
+            }
+        }
+    }
+}

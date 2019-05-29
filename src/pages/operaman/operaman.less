@@ -1,0 +1,29 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/table.less';
+
+.tableWrapper {
+    :global {
+        .ant-rate {
+            font-size: 12px!important;
+        }
+        .ant-table-thead {
+            & > tr {
+                & > th {
+                    border: 1px solid #2E3A54 !important;
+                }
+                & > th[rowspan] {
+                    border-right: none !important;
+                    border-left: none !important;
+                }
+                
+            }
+            & > tr:last-child {
+                & > th {
+                    border-right: none !important;
+                    border-left: none !important;
+                }
+            } 
+        }
+    }
+}
+

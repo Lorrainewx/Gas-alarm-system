@@ -1,0 +1,213 @@
+@import '~antd/lib/style/themes/default.less';
+@table-row-even-bg: #222d43;
+@table-row-odd-bg: #29344a;
+@activebg: #3F5177;
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    background: #222d43;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #666d7c;
+}
+
+:global {
+    .ant-menu[role='menu'] > [role='menuitem'].ant-menu-item-selected {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .ant-tabs {
+        &-bar[role='tablist'] {
+            border: none;
+        }
+
+        &-card-bar {
+            .ant-tabs-tab {
+                background: transparent !important;
+                border: none !important;
+            }
+
+            .ant-tabs-tab-active {
+                background: #303B51 !important;
+                color: @text-color !important;
+            }
+        }
+    }
+
+    .ant-card-head {
+        border-bottom: none !important;
+    }
+
+    .ant-table {
+        .ant-table-thead {
+            border-bottom: 1px solid #2d3952;
+
+            & > tr > th {
+                border: none;
+            }
+        }
+
+        .ant-table-tbody > tr.ant-table-row {
+            &:nth-of-type(even) {
+                background: @table-row-even-bg;
+            }
+            &:nth-of-type(odd) {
+                background: @table-row-odd-bg;
+            }
+        }
+
+        .ant-table-tbody > tr.ant-table-row.unchanged {
+            background: #212936 !important;
+        }
+
+        .ant-table-tbody > tr > td {
+            border: none;
+        }
+
+        td,
+        th {
+            white-space: nowrap;
+        }
+
+        .ant-table-placeholder {
+            border-bottom: none;
+        }
+    }
+
+    .ant-tabs-bar {
+        .ant-tabs-nav {
+            color: @text-color;
+        }
+
+        .ant-tabs-tab-next,
+        .ant-tabs-tab-prev {
+            color: @text-color;
+        }
+    }
+
+    .ant-switch {
+        background-color: #e6e6e6 !important;
+
+        &.ant-switch-loading-icon,
+        &::after {
+            background-color: #fff !important;
+        }
+
+        &.ant-switch-checked {
+            background: @primary-color !important;
+        }
+    }
+
+    .ant-pagination {
+        margin: 30px 0;
+        &-item-active {
+            background: @activebg!important;
+            border: none!important;
+        }
+        &-disabled,
+        &-disabled:focus,
+        &-disabled:hover,
+        &-item-active,
+        &-item-active:hover {
+            border: none;
+            .ant-pagination-item-link,
+            a {
+                color: @text-color!important;
+            }
+        }
+    }
+
+    .ant-form {
+        &.ant-form-inline .ant-form-item.ant-form-item-with-help {
+            margin-bottom: 0;
+        }
+    }
+    .ant-input:focus,
+    .ant-input:hover,
+    .ant-select-focused .ant-select-selection,
+    .ant-select-selection:active,
+    .ant-select-selection:focus,
+    .ant-select-selection:hover {
+        border-color: @activebg!important;
+        box-shadow: none!important;
+    }
+
+    .ant-input[disabled],
+    .ant-select-disabled {
+        background: #525252 !important;
+    }
+
+    .ant-calendar .ant-calendar-disabled-cell .ant-calendar-date {
+        background: #1f2638;
+        color: #666d7c;
+        &:hover{
+          background: #29344a;
+        }
+    }
+
+    .ant-modal-content {
+        color: @text-color;
+
+        .ant-modal-header {
+            border: none;
+
+            .ant-modal-title {
+                text-align: center;
+            }
+        }
+        .ant-modal-body {
+            padding: 0;
+            background: #293146;
+        }
+    }
+
+    .ant-timeline-item {
+        .ant-timeline-item-head {
+            background-color: #fff;
+        }
+    }
+
+}
+
+#root,
+body,
+html {
+    height: 100%;
+}
+
+.colorWeak {
+    filter: invert(80%);
+}
+
+.ant-layout {
+    min-height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+    width: 100%;
+    margin: 40px 0 !important;
+}
+
+ol,
+ul {
+    list-style: none;
+}

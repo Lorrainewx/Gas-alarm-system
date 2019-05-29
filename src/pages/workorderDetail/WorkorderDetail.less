@@ -1,0 +1,57 @@
+@import '~antd/lib/style/themes/default.less';
+
+.workDetail{
+    background: #29344a;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    ul{
+        width: 100%;
+        min-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        padding: 8px 28px;
+        &:nth-of-type(1){
+            border-bottom: 1px solid #4f5a6e;
+        }
+        li{
+            display: flex;
+            word-break: keep-all;
+            list-style: none;
+            width: 25%;
+            min-width: 360px;
+            margin: 8px 0;
+            overflow: auto;
+        }
+    }
+}
+
+.workContent{
+    height: 48px;
+    display: flex;
+    background: #29344a;
+    &.title{
+        border-bottom: 1px solid #4e596d;
+        background: #222d43;
+    }
+    div{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 40px;
+        }
+    }
+}
+
+.timelineTime{
+    position: absolute;
+    top: 0;
+    left: -156px;
+}
+
+.timelineName{
+    color: @primary-color;
+    margin-right: 16px;
+}

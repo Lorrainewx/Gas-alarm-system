@@ -1,0 +1,98 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+@import '~@/utils/table.less';
+
+@active: #60D797;
+@primaryCol: #303B51;
+
+.modal {
+    :global {
+        .ant-modal-header {
+            border-color: #3F5177;
+        }
+
+        .ant-modal-footer {
+            display: none;
+        }
+
+        .ant-input,
+        .ant-select-selection {
+            background: transparent;
+            border-radius: 0;
+            border-color: @white;
+        }
+
+        .ant-calendar-picker-icon {
+            color: @white;
+        }
+
+        .ant-form-item {
+            margin-bottom: 16px;
+        }
+
+        .ant-form-item-control,
+        .ant-form-item-label {
+            width: 170px;
+        }
+    }
+}
+
+.main {
+    :global {
+        .ant-input{
+            height: 26px;
+            padding: 0;
+        }
+        .ant-table .ant-table-thead>tr>th {
+			border: 1px solid #29344a;
+			padding: 10px 16px;
+			text-align: center;
+        }
+    }
+}
+
+.form {
+    padding: 37px 0 24px 0;
+    margin-right: 120px;
+
+    :global {
+        .ant-row.ant-form-item {
+            width: 100%;
+            display: flex;
+
+            .ant-form-item-control-wrapper {
+                width: 100%;
+
+                .ant-form-item-control {
+                    width: 100%;
+
+                    input {
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+
+        .ant-checkbox .ant-checkbox-inner {
+            background: @primaryCol;
+
+            &::after {
+                border-color: @active;
+            }
+        }
+    }
+
+    .btns {
+        padding-left: 120px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .text {
+            font-size: 13px;
+            color: @active;
+        }
+    }
+}

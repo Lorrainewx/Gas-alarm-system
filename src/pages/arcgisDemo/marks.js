@@ -1,0 +1,15 @@
+import el5 from '@/assets/images/quality_0_m.png';
+import l3 from '@/assets/images/quality_3_m.png';
+import l4 from '@/assets/images/quality_4_m.png';
+import l5 from '@/assets/images/quality_5_m.png';
+import e from '@/assets/images/quality_error_m.png';
+
+export default [{ "name": "五牧", "latitude": "31.6827097129", "longitude": "120.1304628211", "riverquality": "Ⅴ类" }, { "name": "百渎", "latitude": "31.4838136097", "longitude": "120.0404062421", "riverquality": "Ⅳ类" }, { "name": "厚余", "latitude": "31.59664873", "longitude": "119.93736068", "riverquality": "Ⅲ类" }, { "name": "厚庄", "latitude": "31.7186013325", "longitude": "119.8225968271", "riverquality": "Ⅲ类" }, { "name": "捕捞村桥", "latitude": "31.6908435126", "longitude": "119.7900905745", "riverquality": "Ⅳ类" }, { "name": "安欢桥", "latitude": "31.6396449901", "longitude": "119.7490702250", "riverquality": "Ⅲ类" }, { "name": "松坟桥", "latitude": "31.5873637000", "longitude": "119.7588019700", "riverquality": "Ⅲ类" }, { "name": "庄河港", "latitude": "31.5640818706", "longitude": "119.7228268031", "riverquality": "Ⅲ类" }, { "name": "裴家", "latitude": "31.498961", "longitude": "119.996492", "riverquality": "Ⅲ类" }, { "name": "姚巷", "latitude": "31.5057107859", "longitude": "120.1083217732", "riverquality": "Ⅲ类" }, { "name": "雪堰中学旁", "latitude": "31.5117484889", "longitude": "120.1011191498", "riverquality": "Ⅲ类" }, { "name": "雅浦桥", "latitude": "31.473164", "longitude": "120.0881", "riverquality": "Ⅲ类" }, { "name": "东尖", "latitude": "31.605681", "longitude": "120.063828", "riverquality": "Ⅳ类" }, { "name": "范巷", "latitude": "31.6604304100", "longitude": "120.0734610400", "riverquality": "Ⅲ类" }, { "name": "永安河闸口", "latitude": "31.6233995225", "longitude": "119.9753302177", "riverquality": "Ⅲ类" }, { "name": "成塘浜桥", "latitude": "31.6815281087", "longitude": "120.0567933457", "riverquality": "Ⅲ类" }, { "name": "周家塘桥", "latitude": "31.7447428200", "longitude": "120.1068759900", "riverquality": "劣V类" }, { "name": "金狮桥", "latitude": "31.7634804200", "longitude": "120.0270242900", "riverquality": "Ⅲ类" }, { "name": "毛家桥", "latitude": "31.5913474859", "longitude": "120.0204852559", "riverquality": "Ⅳ类" }, { "name": "湖心区", "latitude": "31.3464264125", "longitude": "120.0430824446", "riverquality": "Ⅳ类" }, { "name": "万塔", "latitude": "31.6659235850", "longitude": "119.8857517924", "riverquality": "" }, { "name": "黄埝桥（分水）", "latitude": "31.4947851771", "longitude": "120.0258588139", "riverquality": "" }, { "name": "戚墅堰", "latitude": "31.7221609131", "longitude": "120.0590476457", "riverquality": "" }, { "name": "分庄桥", "latitude": "31.5604831455", "longitude": "119.9432499049", "riverquality": "" }, { "name": "太滆河口区", "latitude": "31.6195934911", "longitude": "119.8585729037", "riverquality": "" }, { "name": "湖南区", "latitude": "31.5835703634", "longitude": "119.80647473168", "riverquality": "" }, { "name": "钟溪大桥", "latitude": "31.5447133412", "longitude": "119.9116968359", "riverquality": "" }];
+
+export const types = {
+    '劣V类': el5,
+    'Ⅲ类': l3,
+    'Ⅳ类': l4,
+    'Ⅴ类': l5,
+    '': e
+};

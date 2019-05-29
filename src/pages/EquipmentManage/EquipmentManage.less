@@ -1,0 +1,123 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/table.less';
+
+@white: #ffffff;
+@active: #60D797;
+@warning: #EAEE51;
+@darkbgcol: #1D202F;
+@primaryCol: #303B51;
+
+// checkbox
+.successfulCheck {
+    margin-right: 10%;
+    color: @active;
+
+    :global {
+        .ant-checkbox-inner {
+            background: transparent;
+        }
+
+        .ant-checkbox-inner,
+        .ant-checkbox-checked::after,
+        .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+        .ant-checkbox:hover .ant-checkbox-inner,
+        .ant-checkbox-input:focus+.ant-checkbox-inner,
+        .ant-checkbox-checked .ant-checkbox-inner::after {
+            border-color: @active;
+        }
+    }
+}
+
+// Modal 模态框
+.modal {
+    :global {
+
+        .ant-input,
+        .ant-select-selection {
+            background: transparent;
+            border-radius: 0;
+            border-color: @white;
+        }
+
+        .ant-calendar-picker-icon {
+            color: @white;
+        }
+
+        .ant-form-item {
+            margin-bottom: 16px;
+        }
+
+        .ant-form-item-control,
+        .ant-form-item-label {
+            width: 170px;
+        }
+    }
+}
+
+.form {
+    padding: 37px 0 24px 0;
+    margin-right: 120px;
+
+    :global {
+        .ant-row.ant-form-item {
+            width: 100%;
+            display: flex;
+
+            .ant-form-item-control-wrapper {
+                width: 100%;
+
+                .ant-form-item-control {
+                    width: 100%;
+
+                    input {
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+
+        .ant-checkbox .ant-checkbox-inner {
+            background: @primaryCol;
+
+            &::after {
+                border-color: @active;
+            }
+        }
+    }
+
+    .btns {
+        padding-left: 120px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .text {
+            font-size: 13px;
+            color: @active;
+        }
+    }
+}
+
+.btncover {
+    color: #ffffff;
+    border-color: #ffffff;
+    width: 100%;
+}
+
+.radioWrapper {
+    padding: 30px;
+
+    :global {
+        .ant-radio-wrapper {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+:global {
+    .ant-modal-footer {
+        border-top: none;
+    }
+}
